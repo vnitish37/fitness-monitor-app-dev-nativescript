@@ -1,0 +1,15 @@
+<FlexboxLayout class="page page-login" backgroundImage="">
+    <StackLayout class="flexbox-item company-name-container">
+        <Label class="t-30 company-name" text="NAH SOLUTIONS™"></Label>
+    </StackLayout>
+
+    
+    
+    <Gif [headers]="headersJSON"  src="{{Gif}}"  stretch="aspectFit" class="company-logo" ></Gif>
+    <StackLayout class="flexbox-item">
+        <Label class="t-18 login-text" text="{{day}}  !!"></Label>
+        <Button class="btn btn-login btn-rounded-sm font-weight-bold t-18 "
+            (tap)="login()" style="color: white ; border-radius: 15px; margin-bottom: 18;" text="Getting Start {{SecurityAuth}}"></Button>
+    </StackLayout>
+</FlexboxLayout>
+

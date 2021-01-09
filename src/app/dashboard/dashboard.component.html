@@ -1,0 +1,32 @@
+
+<ActionBar   title="Features">
+
+   
+  </ActionBar>
+
+
+
+
+<GridLayout  tkExampleTitle tkToggleNavButton>
+    <RadListView (itemTap)="onItemTap($event)" [items]="countries" marginRight="-2">
+        <ListViewGridLayout  tkListViewLayout scrollDirection="Vertical"
+            itemHeight="200" spanCount="2">
+        </ListViewGridLayout>
+        <ng-template tkListItemTemplate let-item="item" let-i="index" let-odd="odd" let-even="even">
+            <GridLayout >
+                <GridLayout margin="15">
+                    <Image src="{{ item.imageSrc }}" stretch="aspectFill"></Image>
+                    <GridLayout verticalAlignment="bottom">
+                        <StackLayout backgroundColor="#8209ab" paddingTop="0"
+                            paddingBottom="0" paddingLeft="16" paddingRight="16">
+                            <Label style="font-size: 15; " text="{{ item.name }}" class="countryName"></Label>
+                            <Label text=""
+                                class="countryPop"></Label>
+                        </StackLayout>
+                    </GridLayout>
+                </GridLayout>
+            </GridLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>
+

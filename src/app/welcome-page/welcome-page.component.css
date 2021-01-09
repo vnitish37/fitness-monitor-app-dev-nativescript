@@ -1,0 +1,129 @@
+
+.page {
+   
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    color: #ffffff;
+    background-color: #3C59FD;
+    margin: 5 5 30 5;
+    
+
+}
+.btn:highlighted {
+    background-color: #2241F0;
+}
+
+.flexbox-item {
+    width: 95%;
+    text-align: center;
+}
+
+.action-bar {
+    background-color: #3C59FD;
+    color: #ffffff;
+    padding-right: 10;
+}
+.hr {
+    background-color: #3C59FD;
+    width: 95%;
+    margin-top: 21;
+    height: 1;
+}
+
+/* Login */
+.page-login-container {
+    background-color: #3C59FD;
+    android-status-bar-background: #3C59FD;
+   
+}
+.page-login {
+   
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    flex-direction: column;
+    align-items: center;
+}
+.company-name-container {
+    height: 20%;
+}
+.company-name{
+    margin-top: 50;
+}
+
+.company-logo {
+    flex-grow: 4;
+    height: 50%;
+
+}
+
+.login-text {
+    margin-top: 60;
+    white-space: normal;
+}
+
+.btn-login {
+    
+    background-color: #babd00;
+}
+
+.btn-login:highlighted {
+    background-color: rgb(138, 139, 57);
+    color: rgb(161, 141, 23);
+}
+
+
+
+/*  Welcome */
+
+.title {
+    margin-top: 20;
+}
+.flexbox-item Label {
+    margin-bottom: 4;
+}
+
+.menu-container {
+    width: 90%;
+}
+
+.menu-item {
+    vertical-align: top;
+    width: 50%;
+    margin-bottom: 16;
+}
+.menu-icon {
+    width: 90;
+    height: 90;    
+    vertical-align: top;
+    border-width: 1;
+    border-radius: 50%;
+    font-size: 36;
+    background: linear-gradient(to bottom, #5cca29 0%, #16b36a 100%);
+    background-color: #b60606;
+    border-color: #d8d8d8;
+}
+
+.action-button{
+    font-size: 20;
+}
+
+
+.connection-status-bar{
+    background-color: #4353ff;
+    padding: 10px 0px;
+    text-align: center;
+  }
+  
+   .title{
+      color: rgb(105, 0, 0);
+    }
+  
+  .connection-icon {
+    font-family: Icomoon, 'icomoon', icomoon;
+    font-size: 72pt;
+    color: #4353ff;
+  }

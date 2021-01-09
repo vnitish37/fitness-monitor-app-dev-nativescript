@@ -1,0 +1,29 @@
+<GridLayout>
+      <exoplayer
+      src="{{fitvideo}}"
+      autoplay="true"   controls="false" loop="true" fill="aspectFill" scaleX="1.2" scaleY="1.2"
+      height="5000"></exoplayer>
+
+
+
+   <StackLayout verticalAlignment="top">
+    <Label   text="NAH SOLUTIONS™" class="lbl1 text-center"></Label>
+   </StackLayout>
+
+
+   <StackLayout verticalAlignment="middle">
+    <Label   text="WELCOME TO STAYFIT™" class="lbl text-center"></Label>
+   </StackLayout>
+
+   
+
+    <StackLayout verticalAlignment="bottom">
+    <Button style="font-weight:800;" (tap)="Google()" text="SignIn With Google" class="-outline -rounded-lg"></Button>
+    <Button style="font-weight:800;" (tap)="Facebook()" text="SignIn With Facebook" class="-outline -rounded-lg"></Button>
+    <Button style="font-weight:800;" (tap)="Twitter()" text="SignIn With Twitter" class="-outline -rounded-lg"></Button>
+    <Button style="font-weight:800;"  (tap)="PhoneNumber()" text="Sign In with PhoneNumber" class="-outline -rounded-lg"></Button>
+    </StackLayout>
+
+
+    
+</GridLayout>

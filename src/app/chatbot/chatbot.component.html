@@ -1,0 +1,22 @@
+
+
+<ActionBar   title="Help and Support">
+
+   
+</ActionBar>
+
+
+<WebView *ngIf="web" [src]="webViewSrc" 
+         (loadStarted)="onLoadStarted($event)" 
+         (loadFinished)="onLoadFinished($event)">
+</WebView>
+
+
+
+<GridLayout *ngIf="internet" columns="*,*,*" rows="*,*,*,*,*" >
+    <Label  style="text-align: center;" text="no internet connection" backgroundColor=""></Label>
+
+</GridLayout>
+
+
+

@@ -1,0 +1,597 @@
+
+<ActionBar   title="StayFit 🇮🇳">
+
+    <ActionItem  pageTransition="flip" (tap)="checkNfc()"
+        ios.systemIcon="12" ios.position="left"
+        android.systemIcon="ic_menu_share" android.position="actionBar"
+        ios:horizontalAlignment="center"
+      android:horizontalAlignment="center"></ActionItem>
+    <ActionItem   pageTransition="flip" (tap)="arvideo()"
+        ios.systemIcon="15" ios.position="right"
+        text="logout" android.position="popup"></ActionItem>
+  </ActionBar>
+
+<BottomNavigation>
+    <TabStrip (itemTap)="buttonItemTap($event)">
+        
+        <TabStripItem  class="navigation__item">
+            
+            <Label  text="Home"></Label>
+            <Image src="font://&#xf015;" class="fas t-36"></Image>
+        </TabStripItem>
+        <TabStripItem class="navigation__item">
+            <Label text="Shop"></Label>
+            <Image src="font://&#xf290;" class="far t-36"></Image>
+        </TabStripItem>
+        <TabStripItem class="navigation__item">
+            <Label text="Video"></Label>
+            <Image src="font://&#xf03d;" class="fas t-36"></Image>
+        </TabStripItem>
+        <TabStripItem class="navigation__item">
+            <Label text="Setting"></Label>
+            <Image src="font://&#xf03b;" class="fas t-36"></Image>
+        </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+        <GridLayout>
+               
+            <ScrollView>
+                    <GridLayout rows="*,*,*" columns="20,*">
+                        <GridLayout row="0" col="1">
+                            
+                            <GridLayout rows="50,*" columns="*,20" orientation='vertical'>
+                                <StackLayout row="0" col="0" orientation='horizontal' style="padding-top: 25;">
+                                    <GridLayout columns="260,70,15">
+                                           
+                                        <label col="0" text="Medical Diet"
+                                            style="font-size: 26;  font-weight: bold;"></label>
+                                        <label col="1" text="Details" verticalAlignment="center"
+                                            style="font-weight: bold; font-size: x-small; "></label>
+                                        <label col="2" text="&#xf061;" class="fas" verticalAlignment="center"
+                                            style="font-weight: bold; "></label>
+                                    </GridLayout>
+                                </StackLayout>
+            
+                                <StackLayout row="1" col="0" style="padding-top: 20;">
+                                    <GridLayout rows="200,10,100" columns="30,*,30" backgroundColor="pink"
+                                        style="border-top-right-radius: 90; border-bottom-left-radius: 10; border-bottom-right-radius: 10; border-top-left-radius: 10;">
+                                        <StackLayout row="0" col="1" style="padding-top: 25;">
+                                            <GridLayout rows="80,80" columns="140,200">
+                                                <StackLayout row="0" col="0" orientation="horizontal">
+                                                    <GridLayout rows="10,60,5" columns="3,*">
+                                                        <label row="1" col="0" backgroundColor="blue"></label>
+                                                        <StackLayout row="1" col="1">
+                                                            <GridLayout rows="auto,auto">
+                                                                <label row="0" text="Eaten"
+                                                                    style="font-weight: bold; padding-left: 10; font-size:20; color: black;"></label>
+                                                                <StackLayout row="1" orientation="horizontal">
+                                                                    <Image src="~/images/salad.png" style="width: 55; height: 55;"
+                                                                        horizontalAlignment="left"></Image>
+                                                                    <label text="112" class="h2"
+                                                                        style="padding-top: 10; font-weight: bold;"></label>
+                                                                    <label text="kcal"
+
+                                                                        style="padding-top: 20; padding-left: 5; font-weight: bold;"></label>
+                                                                </StackLayout>
+                                                            </GridLayout>
+                                                        </StackLayout>
+                                                    </GridLayout>
+                                                </StackLayout>
+                                                <StackLayout row="1" col="0" orientation="horizontal">
+                                                    <GridLayout rows="10,60,10" columns="3,*">
+                                                        <label row="1" col="0" backgroundColor="red"></label>
+                                                        <StackLayout row="1" col="1">
+                                                            <GridLayout rows="auto,auto">
+                                                                <label row="0" text="Burned"
+                                                                    style="font-weight: bold; padding-left: 10; font-size: 20; color: black;"></label>
+                                                                <StackLayout row="1" orientation="horizontal">
+                                                                    <Image src="~/images/flame.png" style="width: 55; height: 55;"
+                                                                        horizontalAlignment="left"></Image>
+                                                                    <label text="107" class="h2"
+                                                                        style="padding-top: 10; font-weight: bold;"></label>
+                                                                    <label text="kcal"
+                                                                        style="padding-top: 20; padding-left: 5; font-weight: bold;"></label>
+                                                                </StackLayout>
+                                                            </GridLayout>
+                                                        </StackLayout>
+                                                    </GridLayout>
+                                                </StackLayout>
+                                                <StackLayout rowSpan="2" col="1">
+                                                    <StackLayout class="m-y-15"></StackLayout>
+                                                    
+                                                </StackLayout>
+                                            </GridLayout>
+                                        </StackLayout>
+                                        <StackLayout row="1" col="1" class="hr-light"></StackLayout>
+                                        <StackLayout row="2" col="1">
+                                            <GridLayout rows="10,30,5,40,10" columns="75,30,80,35,70">
+                                                <label row="1" col="0" text="Steps" horizontalAlignment="center"
+                                                    style="font-weight: bold; color:black; font-size:18;"></label>
+                                                <label row="2" col="0" backgroundColor="yellow"></label>
+                                                <StackLayout row="3" col="0" orientation="horizontal">
+                                                    <GridLayout rows="20,20" columns="50,30" style="padding-top: 5;">
+                                                        <label row="0" col="0" text="3000" horizontalAlignment="center"
+                                                            style="font-weight: bold; font-size: 15px;"></label>
+                                                        <label row="1" col="0" text="left" horizontalAlignment="center"
+                                                            style="font-weight: bold;"></label>
+                                                        <Image rowSpan="2" col="1" src="~/images/footsteps-silhouette-variant.png">
+                                                        </Image>
+                                                    </GridLayout>
+                                                </StackLayout>
+                                                <label row="1" col="2" text="Miles" horizontalAlignment="center"
+                                                    style="font-weight: bold; color:black; font-size:18;"></label>
+                                                <label row="2" col="2" backgroundColor="blue"></label>
+                                                <StackLayout row="3" col="2" orientation="horizontal">
+                                                    <GridLayout rows="20,20" columns="50,30" style="padding-top: 5;">
+                                                        <label row="0" col="0" text="2.5" horizontalAlignment="center"
+                                                            style="font-weight: bold; font-size: 15px;"></label>
+                                                        <label row="1" col="0" text="left" horizontalAlignment="center"
+                                                            style="font-weight: bold;"></label>
+                                                        <Image rowSpan="2" col="1" src="~/images/medium.png"></Image>
+                                                    </GridLayout>
+                                                </StackLayout>
+
+                                                <label row="1" col="4" text="Fat" horizontalAlignment="center"
+                                                    style="font-weight: bold; color:black; font-size:18;"></label>
+                                                <label row="2" col="4" backgroundColor="red"></label>
+                                                <StackLayout row="3" col="4" orientation="horizontal">
+                                                    <GridLayout rows="20,20" columns="50,30" style="padding-top: 5;">
+                                                        <label row="0" col="0" text="325" horizontalAlignment="center"
+                                                            style="font-weight: bold; font-size: 15px;"></label>
+                                                        <label row="1" col="0" text="left" horizontalAlignment="center"
+                                                            style="font-weight: bold;"></label>
+                                                        <Image rowSpan="2" col="1" src="~/images/calorie.png"></Image>
+                                                    </GridLayout>
+                                                </StackLayout>
+                                            </GridLayout>
+                                        </StackLayout>
+                                    </GridLayout>
+                                </StackLayout>
+                            </GridLayout>
+                        </GridLayout>
+                
+                        <GridLayout row="1" col="1">
+                            <GridLayout rows="50,*" columns="*,20" orientation='vertical'>
+                                <StackLayout row="0" col="0" orientation='horizontal' style="padding-top: 25;">
+                                    <GridLayout columns="260,70,15">
+                                        <label col="0" text="Meals Today"
+                                            style="font-size: 26; font-weight: bold;"></label>
+                                            <label col="1" text="Details" verticalAlignment="center"
+                                            style="font-weight: bold;font-size: x-small;  "></label>
+                                        <label col="2" text="&#xf061;" class="fas" verticalAlignment="center"
+                                            style="font-weight: bold; "></label>
+                    
+                                    </GridLayout>
+                                </StackLayout>
+                            </GridLayout>
+                
+                
+                            <StackLayout orientation="horizontal" class="">
+                                <GridLayout rows="auto" columns="*">
+                                    <Image class="card-img-thumb" row="0" col="0" stretch="aspectFill"></Image>
+                                </GridLayout>
+                            </StackLayout>
+                
+                            <ScrollView orientation="horizontal">
+                                <GridLayout rows="50,*" columns="170,20,170,20,170" style="padding-top: 20;" orientation="horizontal">
+                                    <StackLayout row="1" col="0">
+                                        <GridLayout rows="100,100,50" columns="*" backgroundColor="skyblue"
+                                            style="border-top-right-radius: 90; border-bottom-left-radius: 10; border-bottom-right-radius: 10; border-top-left-radius: 10;">
+                                            <StackLayout row="0" col="0" marginTop="-60" marginLeft="-45">
+                                                <StackLayout style="background-color: white;width:150;height:150;border-radius: 100;"
+                                                    opacity="0.25" horizontalAlignment="left">
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <StackLayout marginTop="-50" marginLeft="-40">
+                                                <Image src="~/images/fruit.png" style="width: 150; height: 150;"></Image>
+                                            </StackLayout>
+                                            <StackLayout row="1" col="0">
+                                                <GridLayout rows="30,70" columns="10,*,10">
+                                                    <StackLayout row="0" col="1" horizontalAlignment="left">
+                                                        <label text="Breakfast"
+                                                            style="font-size: 20; font-weight: bold; color: white;"></label>
+                                                    </StackLayout>
+                                                    <StackLayout row="1" col="1" style="color: white; font-size: 15;">
+                                                        <label text="Apple,watermelon,"></label>
+                                                        <label text="banana,bread and"></label>
+                                                        <label text="cakes."></label>
+                                                    </StackLayout>
+                                                </GridLayout>
+                                            </StackLayout>
+                                            <StackLayout row="2" col="0">
+                                                <GridLayout rows="50" columns="10,*,10">
+                                                    <StackLayout row="0" col="1" style="color: white; font-size: 15;"
+                                                        orientation="horizontal">
+                                                        <label text="525"
+                                                            style="font-size: 25; font-weight: bold; color: white;"></label>
+                                                        <label text="kcal"
+                                                            style="padding-left: 5; padding-top:10; font-size: 15; font-weight: bold;"></label>
+                                                    </StackLayout>
+                                                </GridLayout>
+                                            </StackLayout>
+                                        </GridLayout>
+                                    </StackLayout>
+                                    <StackLayout row="1" col="2">
+                                        <GridLayout rows="100,100,50" columns="*" backgroundColor="violet"
+                                            style="border-top-right-radius: 90; border-bottom-left-radius: 10; border-bottom-right-radius: 10; border-top-left-radius: 10;">
+                                            <StackLayout row="0" col="0" marginTop="-60" marginLeft="-45">
+                                                <StackLayout style="background-color: white;width:150;height:150;border-radius: 100;"
+                                                    opacity="0.25" horizontalAlignment="left">
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <StackLayout marginTop="-50" marginLeft="-40">
+                                                <Image src="~/images/breakfast.png" style="width: 150; height: 150;"></Image>
+                                            </StackLayout>
+                                            <StackLayout row="1" col="0">
+                                                <GridLayout rows="30,70" columns="10,*,10">
+                                                    <StackLayout row="0" col="1" horizontalAlignment="left">
+                                                        <label text="Lunch"
+                                                            style="font-size: 20; font-weight: bold; color: white;"></label>
+                                                    </StackLayout>
+                                                    <StackLayout row="1" col="1" style="color: white; font-size: 15;">
+                                                        <label text="Salman,Egg,Curry"></label>
+                                                        <label text="and Mixed veggies."></label>
+                                                    </StackLayout>
+                                                </GridLayout>
+                                            </StackLayout>
+                                            <StackLayout row="2" col="0">
+                                                <GridLayout rows="50" columns="10,*,10">
+                                                    <StackLayout row="0" col="1" style="color: white; font-size: 15;"
+                                                        orientation="horizontal">
+                                                        <label text="720"
+                                                            style="font-size: 25; font-weight: bold; color: white;"></label>
+                                                        <label text="kcal"
+                                                            style="padding-left: 5; padding-top:10; font-size: 15; font-weight: bold;"></label>
+                                                    </StackLayout>
+                                                </GridLayout>
+                                            </StackLayout>
+                                        </GridLayout>
+                                    </StackLayout>
+                                    <StackLayout row="1" col="4">
+                                        <GridLayout rows="100,100,50" columns="*" backgroundColor="pink"
+                                            style="border-top-right-radius: 90; border-bottom-left-radius: 10; border-bottom-right-radius: 10; border-top-left-radius: 10;">
+                                            <StackLayout row="0" col="0" marginTop="-60" marginLeft="-45">
+                                                <StackLayout style="background-color: white;width:150;height:150;border-radius: 100;"
+                                                    opacity="0.25" horizontalAlignment="left">
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <StackLayout marginTop="-50" marginLeft="-40">
+                                                <Image src="~/images/sandwich.png" style="width: 150; height: 150;"></Image>
+                                            </StackLayout>
+                                            <StackLayout row="1" col="0">
+                                                <GridLayout rows="30,70" columns="10,*,10">
+                                                    <StackLayout row="0" col="1" horizontalAlignment="left">
+                                                        <label text="Snacks"
+                                                            style="font-size: 20; font-weight: bold; color: white;"></label>
+                                                    </StackLayout>
+                                                    <StackLayout row="1" col="1" style="color: white; font-size: 15;">
+                                                        <label text="Nuts and"></label>
+                                                        <label text="Sandwich"></label>
+                                                    </StackLayout>
+                                                </GridLayout>
+                                            </StackLayout>
+                                            <StackLayout row="2" col="0">
+                                                <GridLayout rows="50" columns="10,*,10">
+                                                    <StackLayout row="0" col="1" style="color: white; font-size: 15;"
+                                                        orientation="horizontal">
+                                                        <label text="360"
+                                                            style="font-size: 25; font-weight: bold; color: white;"></label>
+                                                        <label text="kcal"
+                                                            style="padding-left: 5; padding-top:10; font-size: 15; font-weight: bold;"></label>
+                                                    </StackLayout>
+                                                </GridLayout>
+                                            </StackLayout>
+                                        </GridLayout>
+                                    </StackLayout>
+                                </GridLayout>
+                            </ScrollView>
+                        </GridLayout>
+                        <GridLayout row="2" col="1">
+                            <GridLayout rows="50,*" columns="*,20" orientation='vertical'>
+                                <StackLayout row="0" col="0" orientation='horizontal' style="padding-top: 25;">
+                                    <GridLayout columns="260,70,15">
+                                        <label col="0" text="Body Measurment"
+                                            style="font-size: 26;  font-weight: bold;"></label>
+                                            <label col="1" text="Details" verticalAlignment="center"
+                                            style="font-weight: bold; font-size: x-small; "></label>
+                                        <label col="2" text="&#xf061;" class="fas" verticalAlignment="center"
+                                            style="font-weight: bold; "></label>
+                                    </GridLayout>
+
+                                </StackLayout>
+                
+                                <StackLayout row="1" col="0" style="padding-top: 20;">
+                                    <GridLayout rows="130,10,100" columns="25,20,20" backgroundColor="#b2e312"
+                                        style="border-top-right-radius: 90; border-bottom-left-radius: 10; border-bottom-right-radius: 10; border-top-left-radius: 10;">
+                                        <StackLayout row="0" col="1" style="padding-top: 25;">
+                                            <GridLayout rows="30,100,15" columns="175,145">
+                                                <label row="0" col="0" text="Weight"
+                                                    style="font-size: 20; font-weight:bold; color: black;"
+                                                    verticalAlignment="center"></label>
+                                                <StackLayout row="1" col="0" orientation="horizontal">
+                                                    <label text="104.8" style="font-size: 40; font-weight:bold; color: rgb(255, 255, 255);"></label>
+                                                    <label text="lbs"
+                                                        style="color: rgb(255, 255, 255); padding-left: 5; font-weight:bold; padding-top: 25;"></label>
+                                                </StackLayout>
+                                                <StackLayout row="1" col="1" orientation="horizontal" horizontalAlignment="center"
+                                                    style="padding-top: 15;">
+                                                    <label text="Today 5.30 PM" style="font-weight:bold; font-size: 15; color: black;"></label>
+                                                </StackLayout>
+                                            </GridLayout>
+                                        </StackLayout>
+                                       
+                                        <StackLayout row="2" col="1">
+                                            <GridLayout rows="20,35,35,20" columns="90,10,95,15,95">
+                                                <label row="1" col="0" text="185 cm" horizontalAlignment="center"
+                                                    style="font-weight: bold; color:black; font-size:18;"></label>
+                                                <label row="2" col="0" text="Height" horizontalAlignment="center"
+                                                    style="font-weight: bold; font-size:16; color: rgb(255, 255, 255);"></label>
+                                                <label row="1" col="2" text="27.3 BMI" horizontalAlignment="center"
+                                                    style="font-weight: bold; color:black; font-size:18;"></label>
+                                                <label row="2" col="2" text="Overweight" horizontalAlignment="center"
+                                                    style="font-weight: bold; font-size:16; color: rgb(255, 255, 255);"></label>
+                                                <label row="1" col="4" text="20%" horizontalAlignment="center"
+                                                    style="font-weight: bold; color:black; font-size:18;"></label>
+                                                <label row="2" col="4" text="Body Fat" horizontalAlignment="center"
+                                                    style="font-weight: bold; font-size:16; color: rgb(255, 255, 255);"></label>
+                            
+                                                    
+                                            </GridLayout>
+                                        </StackLayout>
+                                    </GridLayout>
+                                </StackLayout>
+                            </GridLayout>
+                        </GridLayout>
+                    </GridLayout>
+                </ScrollView>
+    </GridLayout>
+    </TabContentItem>
+
+    <TabContentItem>
+
+        <GridLayout rows="*,*,*" columns="20,*">
+            <GridLayout row="0" col="1">
+                
+                    
+                
+                </GridLayout>
+                </GridLayout>
+
+        
+        <GridLayout>
+            
+            
+            
+             <GridLayout tkExampleTitle tkToggleNavButton>
+                
+                 
+                     <RadListView [items]="items1" marginRight="-2" 
+                         (itemLoading)="onItemLoading($event)">
+                         <ListViewStaggeredLayout tkListViewLayout scrollDirection="Vertical"
+                             spanCount="2"></ListViewStaggeredLayout>
+                         <ng-template tkListItemTemplate let-item="item">
+                             <StackLayout margin="15" borderRadius="10">
+                                 <Image src="{{ item.imageSrc }}" width="200" height="120"
+                                     stretch="aspectFill"></Image>
+                                 <StackLayout backgroundColor="{{colordata}}" padding="10">
+                                     <Label  text="{{ item.name }}"  class="item-name" textWrap="true"></Label>
+                                     <Label text="{{ item.desc }}"  class="item-desc" textWrap="true"></Label>
+                                     <Label text="{{ item.price }}"  class="item-price"></Label>
+                                 </StackLayout>
+                             </StackLayout>
+                         </ng-template>
+                     </RadListView>
+                 </GridLayout>
+        </GridLayout>
+ </TabContentItem>
+
+    <TabContentItem>
+        <GridLayout>
+
+        
+                   
+           
+           
+            <GridLayout tkExampleTitle tkToggleNavButton>
+                
+                    <RadListView [items]="locations" marginRight="-1">
+                        <ListViewGridLayout tkListViewLayout scrollDirection="Vertical"
+                            itemHeight="200" spanCount="1">
+                        </ListViewGridLayout>
+                        <ng-template tkListItemTemplate let-item="item">
+                            <GridLayout >
+                                <GridLayout>
+                                    <ios>
+                                        <exoplayer
+      src="{{ item.imageSrc }}"
+      fill = "true"
+      height="300"></exoplayer>
+      
+                                    </ios>
+                                    <android>
+                                        <Image src="{{ item.imageSrc }}" stretch="aspectFill"
+                                            height="180"></Image>
+                                        <!-- <FrescoDrawee horizontalAlignment="stretch" height="180"
+                                            imageUri="{{ item.imageSrc }}"></FrescoDrawee> -->
+                                    </android>
+                                    <GridLayout verticalAlignment="bottom">
+                                        <StackLayout paddingTop="8" paddingBottom="8"
+                                            paddingLeft="16" paddingRight="16">
+                                            <Label text="{{ item.city }}" class="locationCity"></Label>
+                                            <Label text="{{ item.country }}" class="locationCountry"></Label>
+                                        </StackLayout>
+                                    </GridLayout>
+                                </GridLayout>
+                            </GridLayout>
+                        </ng-template>
+                    </RadListView>
+                </GridLayout>
+    </GridLayout>
+    </TabContentItem>
+
+    <TabContentItem>
+        
+       
+
+
+        
+        <GridLayout rows="auto, auto, *">
+            <GridLayout row="0" col="1">
+
+                <Label  row="0"  style="font-weight: bold; font-size: 34 ; margin-bottom: -20;  margin-right: 35; margin-left: 18;" text="Welcome {{SettingUsername}} ⭐"></Label>
+                <Label   row="2" style="margin-right: 35; margin-bottom: -30; margin-left: 25; font-weight: bold; font-size:x-large;   margin-top: 40;" text="{{UserEmail}}"></Label>
+               
+            </GridLayout>
+
+
+
+      <ScrollView orientation="horizontal">
+        <GridLayout rows="50,*" columns="170,20,170,20,170" style="padding-top: 20;" orientation="horizontal">
+            <StackLayout row="1" col="0">
+                <GridLayout rows="100,100,50" columns="*" backgroundColor="skyblue"
+                    style="border-top-right-radius: 90; border-bottom-left-radius: 10; border-bottom-right-radius: 10; border-top-left-radius: 10;">
+                    <StackLayout row="0" col="0" marginTop="-60" marginLeft="-45">
+                        <StackLayout style="background-color: white;width:150;height:150;border-radius: 100;"
+                            opacity="0.25" horizontalAlignment="left">
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout marginTop="-50" marginLeft="-40">
+                        <exoplayer
+                        src="https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4"
+                        fill = "true"
+                        height="200" autoplay="false" muted="true"></exoplayer>
+                    </StackLayout>
+                    <StackLayout row="1" col="0">
+                        <GridLayout rows="30,70" columns="10,*,10">
+                            <StackLayout row="0" col="1" horizontalAlignment="left">
+                                <label text="Breakfast"
+                                    style="font-size: 20; font-weight: bold; color: white;"></label>
+                            </StackLayout>
+                            <StackLayout row="1" col="1" style="color: white; font-size: 15;">
+                                <label text="Apple,watermelon,"></label>
+                                <label text="banana,bread and"></label>
+                                <label text="cakes."></label>
+                            </StackLayout>
+                        </GridLayout>
+                    </StackLayout>
+                    <StackLayout row="2" col="0">
+                        <GridLayout rows="50" columns="10,*,10">
+                            <StackLayout row="0" col="1" style="color: white; font-size: 15;"
+                                orientation="horizontal">
+                                <label text="525"
+                                    style="font-size: 25; font-weight: bold; color: white;"></label>
+                                <label text="kcal"
+                                    style="padding-left: 5; padding-top:10; font-size: 15; font-weight: bold;"></label>
+                            </StackLayout>
+                        </GridLayout>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout row="1" col="2">
+                <GridLayout rows="100,100,50" columns="*" backgroundColor="violet"
+                    style="border-top-right-radius: 90; border-bottom-left-radius: 10; border-bottom-right-radius: 10; border-top-left-radius: 10;">
+                    <StackLayout row="0" col="0" marginTop="-60" marginLeft="-45">
+                        <StackLayout style="background-color: white;width:150;height:150;border-radius: 100;"
+                            opacity="0.25" horizontalAlignment="left">
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout marginTop="-50" marginLeft="-40">
+                        <exoplayer
+                        src="https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4"
+                        fill = "true"
+                        height="200" autoplay="false" muted="true"></exoplayer>
+                    </StackLayout>
+                    <StackLayout row="1" col="0">
+                        <GridLayout rows="30,70" columns="10,*,10">
+                            <StackLayout row="0" col="1" horizontalAlignment="left">
+                                <label text="Lunch"
+                                    style="font-size: 20; font-weight: bold; color: white;"></label>
+                            </StackLayout>
+                            <StackLayout row="1" col="1" style="color: white; font-size: 15;">
+                                <label text="Salman,Egg,Curry"></label>
+                                <label text="and Mixed veggies."></label>
+                            </StackLayout>
+                        </GridLayout>
+                    </StackLayout>
+                    <StackLayout row="2" col="0">
+                        <GridLayout rows="50" columns="10,*,10">
+                            <StackLayout row="0" col="1" style="color: white; font-size: 15;"
+                                orientation="horizontal">
+                                <label text="720"
+                                    style="font-size: 25; font-weight: bold; color: white;"></label>
+                                <label text="kcal"
+                                    style="padding-left: 5; padding-top:10; font-size: 15; font-weight: bold;"></label>
+                            </StackLayout>
+                        </GridLayout>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout row="1" col="4">
+                <GridLayout rows="100,100,50" columns="*" backgroundColor="pink"
+                    style="border-top-right-radius: 90; border-bottom-left-radius: 10; border-bottom-right-radius: 10; border-top-left-radius: 10;">
+                    <StackLayout row="0" col="0" marginTop="-60" marginLeft="-45">
+                        <StackLayout style="background-color: white;width:150;height:150;border-radius: 100;"
+                            opacity="0.25" horizontalAlignment="left">
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout marginTop="-50" marginLeft="-40">
+                        <exoplayer
+                        src="https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4"
+                        fill = "true"
+                        height="150" autoplay="false" muted="true"></exoplayer>
+                    </StackLayout>
+                    <StackLayout row="1" col="0">
+                        <GridLayout rows="30,70" columns="10,*,10">
+                            <StackLayout row="0" col="1" horizontalAlignment="left">
+                                <label text="Snacks"
+                                    style="font-size: 20; font-weight: bold; color: white;"></label>
+                            </StackLayout>
+                            <StackLayout row="1" col="1" style="color: white; font-size: 15;">
+                                <label text="Nuts and"></label>
+                                <label text="Sandwich"></label>
+                            </StackLayout>
+                        </GridLayout>
+                    </StackLayout>
+                    <StackLayout row="2" col="0">
+                        <GridLayout rows="50" columns="10,*,10">
+                            <StackLayout row="0" col="1" style="color: white; font-size: 15;"
+                                orientation="horizontal">
+                                <label text="360"
+                                    style="font-size: 25; font-weight: bold; color: white;"></label>
+                                <label text="kcal"
+                                    style="padding-left: 5; padding-top:10; font-size: 15; font-weight: bold;"></label>
+                            </StackLayout>
+                        </GridLayout>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+        </GridLayout>
+    </ScrollView>
+
+       
+
+
+        
+          
+        
+    
+     
+        
+            <ListView separatorColor="transparent" row="2" [items]="items" (itemTap)="onItemTap($event)" class="list-group">
+                
+                <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+                    <!-- The item template can only have a single root view container (e.g. GridLayout, StackLayout, etc.)-->
+                   
+                    <GridLayout class="list-group-item" rows="*" columns="auto, *">
+                        <Image row="0" col="0" [src]="item.src" class="thumb img-circle"></Image>
+                        <Label row="0" col="1" [text]="item.name"></Label>
+                    </GridLayout>
+                </ng-template>
+            </ListView>
+        </GridLayout>
+       
+            
+        
+    </TabContentItem>
+</BottomNavigation>

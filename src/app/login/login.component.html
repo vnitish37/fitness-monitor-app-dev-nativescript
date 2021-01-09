@@ -1,0 +1,49 @@
+<FlexboxLayout class="page">
+    <StackLayout class="form">
+        <Image class="header" src="~/assets/logo1.png"></Image>
+        <Label class="font" style="text-align: center; font-size: 55; margin-top: -70; justify-content: center;" text="LOGIN"></Label>
+
+        <PreviousNextView>
+            <ScrollView>
+            <GridLayout rows="auto, auto, auto">
+                <StackLayout row="0" class="input-field">
+                    
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+                <StackLayout row="1" class="input-field">
+                    <TextField  class="input" returnKeyType="done" borderBottomColor="{{messagecolor}}"  keyboardType="phone" autocapitalizationType="none" 
+                    hint="Mobile Number" [(ngModel)]="_username" 
+                    
+                    ></TextField>
+
+                    <TextField  class="input" 
+                        hint="Password" autocapitalizationType="none" borderBottomColor="{{messagecolor}}"  [(ngModel)]="_password" secure="true" 
+                        returnKeyType="done"
+                        ></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>                
+            </GridLayout>
+        </ScrollView>
+        </PreviousNextView>
+
+        <Button style="color: white;" text="SignIn" 
+            (tap)="submit()" class="btn btn-primary m-t-20"></Button>
+            
+            <Label class="login-label sign-up-label" (tap)="forgot()">
+                <FormattedString >
+                    <Span  text="Forgot Password ?"></Span>
+                </FormattedString>
+            </Label>
+
+            <ActivityIndicator [busy]="processing" busy="true" color="{{messagecolor}}" ></ActivityIndicator>
+
+    </StackLayout>
+
+    <Label class="login-label sign-up-label" (tap)="register()">
+        <FormattedString>
+            <Span text="Don’t have an account ? - SignUp"></Span>
+           
+        </FormattedString>
+    </Label>
+</FlexboxLayout>

@@ -1,0 +1,10 @@
+<ActionBar title="Stayfit AR"></ActionBar>
+
+<GridLayout class="page">
+  <AR *ngIf="loaded"
+    debugLevel="FEATURE_POINTS"
+    detectPlanes="true"
+    [planeMaterial]="planeMaterial">
+  </AR>
+</GridLayout>
+

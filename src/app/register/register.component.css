@@ -1,0 +1,73 @@
+.page {
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .form {
+    margin-left: 15;
+    margin-right: 15;
+    flex-grow: 4;
+    vertical-align: middle;
+  }
+  
+  .logo {
+    margin-bottom: 8;
+    text-align: center;
+    height: 22%;
+    font-weight: bold;
+  }
+  .header {
+    horizontal-align: center;
+    font-size: 25;
+    font-weight: 180;
+    margin-bottom: 0;
+    text-align: center;
+   
+  }
+  
+  .input-field {
+    margin-bottom: 10;
+
+  }
+  .input {
+    font-size: 18;
+    
+  }
+  
+  .btn-primary {
+    height: 50;
+    margin:   5 5 15 5;
+    background-color: rgb(157, 221, 7);
+    color: white;
+    border-radius: 5;
+    font-size: 20;
+    text-align: center;
+    font-weight: 600;
+    margin-top: -30px;
+    margin-bottom: 50px;
+  }
+
+  .font {
+    font-family: "Carrinady";
+    font-weight: 900;
+    
+  }
+  .login-label {
+    horizontal-align: center;
+    margin-bottom: 10;
+    
+  }
+  .sign-up-label {
+      font-size: 18px;
+    margin-bottom: 20;
+    margin-top: -40;
+    text-align: center;
+   
+  }
+  .bold {
+    
+  }
+  .bottom{
+    margin:   0 0 0 0;
+    margin-top: 25px;
+  }

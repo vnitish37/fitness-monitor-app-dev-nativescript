@@ -1,0 +1,46 @@
+<ActionBar title="Profile Update" class="action-bar">
+    <ActionItem   pageTransition="flip" (tap)="update()"
+    ios.systemIcon="7" ios.position="right" android.position="popup"></ActionItem>
+</ActionBar>
+<GridLayout>
+	
+        <PreviousNextView>
+            <ScrollView>
+		<StackLayout class="m-20">
+			<Label class="m-b-20" style="font-size: 32; font-weight: bold;"  text=" Profile Update {{name}}" ></Label>
+            <StackLayout class="input-field">
+                <Label text="Name" class="label font-weight-bold m-b-5"></Label>
+                <TextField class="input" style="width: 100%; font-size: medium;" hint="{{getname}}"  borderBottomColor="#9ddd07" [(ngModel)]="name"></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label text="Email" class="label font-weight-bold m-b-5"></Label>
+                <TextField style="width: 100%; font-size: medium;"class="input" keyboardType="email" editable= "false"  borderBottomColor="#9ddd07" hint="{{getemail}}" [(ngModel)]="email"></TextField>
+               
+                <StackLayout class="hr-light"></StackLayout>
+            </StackLayout>
+
+            <StackLayout class="input-field">
+                <Label text="mobile number" class="label font-weight-bold m-b-5"></Label>
+                <TextField style="width: 100%; font-size: medium;" class="input" keyboardType="phone" editable= "false"  borderBottomColor="#9ddd07" hint="{{getmobile}}" [(ngModel)]="mobile"></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label text="Address" class="label font-weight-bold m-b-5"></Label>
+                <TextField class="input" style="width: 100%; font-size: medium;" hint="{{getAddress}}"  borderBottomColor="#9ddd07" [(ngModel)]="address"></TextField>
+                <StackLayout class="hr-light"></StackLayout>
+            </StackLayout>
+           
+
+
+            <Button text="Update" 
+            (tap)="submit()" class="btn btn-primary m-t-20"></Button>
+       
+        </StackLayout>
+
+    </ScrollView>
+
+    </PreviousNextView>
+        
+	
+</GridLayout>
